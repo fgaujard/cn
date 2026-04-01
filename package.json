@@ -1,0 +1,50 @@
+{
+  "name": "cn",
+  "version": "1.0.0",
+  "description": "« cn » is a utility function popularized by Shadcn. It stands for « classNames » and is used to merge CSS classes cleanly, built with clsx and tailwind-merge to handle conditional classes and resolve class conflicts.",
+  "keywords": [
+    "cn",
+    "classNames",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "scripts": {
+    "build": "npm run build:js && npm run build:types",
+    "build:js": "tsup index.ts --format cjs,esm",
+    "build:types": "tsc --emitDeclarationOnly",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "dependencies": {
+    "clsx": "=2.1.1",
+    "tailwind-merge": "=3.5.0"
+  },
+  "devDependencies": {
+    "tsup": "=8.5.1",
+    "typescript": "=6.0.2",
+    "vitest": "=4.1.2"
+  },
+  "homepage": "https://github.com/fgaujard/cn#readme",
+  "bugs": {
+    "url": "https://github.com/fgaujard/cn/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fgaujard/cn.git"
+  },
+  "license": "MIT"
+}
